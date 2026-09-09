@@ -1,237 +1,256 @@
 <!DOCTYPE html>
-  <html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <title>Ferienchalet Bödele</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <nav class="navbar">
-        <div class="logo"><a href="index.html">Ferienchalet Bödele</a></div>      
-        <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="#haeuser">Häuser</a></li>
-        <li><a href="info.html">Info</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+    rel="stylesheet"
+  >
 
-    <header class="hero">
-    <div class="hero-slide active" style="background-image: url('images/Winter.jpg');">
-    <div class="snow"></div>
+  <title>Ferienchalet Bödele</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Ferienchalet Bödele</a>
     </div>
-    <div class="hero-slide" style="background-image: url('images/Sommer.jpg');">
-    <div class="sunrays"></div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#houses">Häuser</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+
+    <div
+      class="hero-slide active"
+      style="background-image: url('images/winter.jpg');"
+    >
+      <div class="snow"></div>
+    </div>
+
+    <div
+      class="hero-slide"
+      style="background-image: url('images/summer.jpg');"
+    >
+      <div class="sunrays"></div>
     </div>
 
     <div class="hero-text">
       <h1>Ferienchalet Bödele Familie Feichtinger</h1>
-      <p>Gemütliches Ferienchalet am Bödele – ideal für Wander- und Winterurlaub.
-        Geeignet für Familien, Paare oder Alleinreisende. Auch Haustiere sind herzlich willkommen.</p>
+
+      <p>
+        Gemütliches Ferienchalet am Bödele – ideal für Wander- und Winterurlaub.
+        Geeignet für Familien, Paare oder Alleinreisende. Auch Haustiere sind
+        herzlich willkommen.
+      </p>
     </div>
 
     <div class="hero-dots">
-      <button class="dot active" data-index="0" aria-label="Winterbild anzeigen"></button>
-      <button class="dot" data-index="1" aria-label="Sommerbild anzeigen"></button>
+      <button
+        class="dot active"
+        data-index="0"
+        aria-label="Gehe zu Ansicht im Winter"
+      ></button>
+
+      <button
+        class="dot"
+        data-index="1"
+        aria-label="Gehe zu Ansicht im Sommer"
+      ></button>
     </div>
+
   </header>
 
-    <main>
-      <section id="haeuser">
-        <h2>Unsere Häuser</h2>
-        <p class="tagline">Ankommen. Abschalten. Bödele genießen.</p>
-        <p class="intro">
-          Die Wohnung befindet sich in einem Reihenhaus, gerade einmal fünf PKW-Minuten vom Ort Schwarzenberg (Einkaufsmöglichkeit) entfernt. Die Zufahrt ist problemlos bis direkt vors Haus möglich.
-        </p>
+  <main>
 
-        <p class="intro">
-          Sie befinden sich in einem wunderschönen Wandergebiet in der Nähe der Stadt Dornbirn. In 10 Fahrminuten können Sie hier auch die Messestadt mit Museen (Inatura) oder ein Einkaufsparadies (Messepark) besuchen. Im
-        Winter ist das Bödele als schneesicheres Ski- und Rodelparadies bekannt.
-        </p>
+    <section id="houses">
 
-        <p class="intro">
-          Viele umliegende Ausflugsziele, wie Karrenseilbahn, Bodensee, Bregenzerwald oder eine Vielfalt an bester, freundlicher Gastronomie lassen den Urlaub am Bödele zu einem einzigartigen Erlebnis werden! Für
-        Kulturinteressierte gibt es mehrmals im Jahr Schubertiade-Konzerte in Schwarzenberg, die weltberühmte Künstler der Klassik zu ihren Gästen zählen dürfen.
-        </p>
+      <h2>Unsere Häuser</h2>
 
-        <p class="intro">
-          Das Reihenhaus verfügt über eine Diele, eine Küche, einen kombinierten Wohn- und Essbereich, 2 Schlafzimmer, ein Badezimmer mit Dusche und einen Skikeller.
-        </p>
+      <p class="tagline">
+        Ankommen. Abschalten. Bödele genießen.
+      </p>
 
-      <div class="carousel-wrap">
-        <button class="carousel-btn prev" aria-label="Zurück">&#10094;</button>
-        <div class="carousel" id="haeuserCarousel">
-          <img src="images/Wohnzimmer.jpg" alt="Wohnzimmer">
-          <img src="images/Kueche.jpg" alt="Küche">
-          <img src="images/Schlafzimmer.jpg" alt="Schlafzimmer">
-          <img src="images/Winter.jpg" alt="Ansicht im Winter">
-          <img src="images/Hund.jpg" alt="Hund im Garten">
-          <img src="images/Doppelbild.jpg" alt="Ferienchalet">
+      <p class="intro">
+        Rund um das Bödele erwartet Sie zu jeder Jahreszeit eine besondere Berglandschaft: 
+        im Sommer mit angenehmer, frischer Bergluft und vielen Wanderwegen, im Winter mit Schnee, 
+        Skifahren, Rodeln und schönen Spaziergängen durch die verschneite Umgebung.
+      </p>
+
+      <p class="intro">
+        Unsere Ferienhäuser liegen als kleiner Reihenhauskomplex zwischen Schwarzenberg und Dornbirn. 
+        Sie sind mit dem Auto sehr gut erreichbar, und direkt vor den Häusern stehen Parkmöglichkeiten zur Verfügung.
+      </p>
+
+      
+      <div class="gallery-wrap">
+
+        <button class="gallery-btn prev" aria-label="Zurück">
+          &#10094;
+        </button>
+
+        <div class="gallery" id="picturegallery">
+          <img src="images/livingroom.jpg" alt="Wohnzimmer">
+          <img src="images/kitchen.jpg" alt="Küche">
+          <img src="images/bedroom.jpg" alt="Schlafzimmer">
+          <img src="images/winter.jpg" alt="Ansicht im Winter">
+          <img src="images/dog.jpg" alt="Hund im Garten">
+          <img src="images/doublepicture.jpg" alt="Ferienchalet">
         </div>
-        <button class="carousel-btn next" aria-label="Weiter">&#10095;</button>
+
+        <button class="gallery-btn next" aria-label="Weiter">
+          &#10095;
+        </button>
+
       </div>
 
+      <p class="intro">
+        Die Ferienhäuser bieten einen gemütlichen Wohn- und Essbereich mit Küche, einen Eingangsbereich,
+        einen Balkon sowie ein Badezimmer mit Dusche und WC.
+      </p>
+
+      <p class="intro">
+        Eine Treppe führt in den unteren Bereich mit zwei Schlafzimmern: ein Schlafzimmer mit Doppelbett
+        und ein weiteres mit zwei Einzelbetten. Zusätzlich steht ein Keller zur Verfügung, der sich zum
+        Beispiel ideal zur Aufbewahrung von Ski und anderer Ausrüstung eignet.
+      </p>
+
       <h3 class="amenities-title">Ausstattung</h3>
-        <h3 class="amenities-title">Ausstattung</h3>
 
-          <div class="amenities-groups">
-            <div class="amenities-group">
-              <h4>Wohnfläche</h4>
-              <ul class="amenities">
-                <li>70 m²</li>
-                <li>Keller- und Skiraum</li>
-              </ul>
-            </div>
+      <div class="amenities-groups">
 
-            <div class="amenities-group">
-              <h4>Allgemeines</h4>
-              <ul class="amenities">
-                <li>Handtücher</li>
-                <li>Bettwäsche</li>
-              </ul>
-            </div>
+        <div class="amenities-group">
+          <h4>Wohnfläche</h4>
 
-            <div class="amenities-group">
-              <h4>Küche</h4>
-              <ul class="amenities">
-                <li>Kaffeemaschine</li>
-                <li>2-Plattenherd</li>
-                <li>Kühlschrank</li>
-                <li>Gefrierfach</li>
-                <li>Backofen</li>
-              </ul>
-            </div>
+          <ul class="amenities">
+            <li>70 m²</li>
+            <li>Keller- und Skiraum</li>
+          </ul>
+        </div>
 
-            <div class="amenities-group">
-              <h4>Essgelegenheit</h4>
-              <ul class="amenities">
-                <li>Essbereich</li>
-                <li>Sitzmöglichkeiten für 6 Personen</li>
-              </ul>
-            </div>
+        <div class="amenities-group">
+          <h4>Allgemeines</h4>
 
-            <div class="amenities-group">
-              <h4>Badezimmer</h4>
-              <ul class="amenities">
-                <li>1 Badezimmer</li>
-                <li>Badezimmer 1 – WC, Dusche</li>
-              </ul>
-            </div>
+          <ul class="amenities">
+            <li>Handtücher</li>
+            <li>Bettwäsche</li>
+          </ul>
+        </div>
 
-            <div class="amenities-group">
-              <h4>Schlafzimmer</h4>
-              <ul class="amenities">
-                <li>2 Schlafzimmer, Schlafmöglichkeiten für 6</li>
-                <li>Schlafzimmer 1 – 1 Doppelbett</li>
-                <li>Schlafzimmer 2 – 2 Einzelbetten</li>
-                <li>1 Schlafzimmer ist mit 2 Stockbetten ausgestattet</li>
-              </ul>
-            </div>
+        <div class="amenities-group">
+          <h4>Küche</h4>
 
-            <div class="amenities-group">
-              <h4>Außenbereich</h4>
-              <ul class="amenities">
-                <li>Garten</li>
-                <li>Balkon</li>
-                <li>Parkplatz</li>
-              </ul>
-            </div>
+          <ul class="amenities">
+            <li>Kaffeemaschine</li>
+            <li>2-Plattenherd</li>
+            <li>Kühlschrank</li>
+            <li>Gefrierfach</li>
+            <li>Backofen</li>
+          </ul>
+        </div>
 
-            <div class="amenities-group">
-              <h4>Unterhaltung</h4>
-              <ul class="amenities">
-                <li>Fernseher</li>
-                <li>Radio</li>
-                <li>CD-Player</li>
-              </ul>
-            </div>
+        <div class="amenities-group">
+          <h4>Essgelegenheit</h4>
 
-            <div class="amenities-group">
-              <h4>Geeignet für</h4>
-              <ul class="amenities">
-                <li>Nichtraucherdomizil</li>
-                <li>Langzeitmieter willkommen</li>
-                <li>Haustiere erlaubt</li>
-                <li>Geeignet für Senioren</li>
-                <li>Für Kinder geeignet</li>
-                <li>Für Rollstuhlfahrer ungeeignet</li>
-              </ul>
-            </div>
+          <ul class="amenities">
+            <li>Essbereich</li>
+            <li>Sitzmöglichkeiten für 6 Personen</li>
+          </ul>
+        </div>
 
-            <div class="amenities-group">
-              <h4>Sportmöglichkeiten vor Ort</h4>
-              <ul class="amenities">
-                <li>Wandern</li>
-                <li>Skilaufen</li>
-                <li>Mountainbiking</li>
-                <li>Bergsteigen</li>
-              </ul>
-            </div>
-          </div>
+        <div class="amenities-group">
+          <h4>Badezimmer</h4>
 
-          <p class="intro">
-            <strong>Weitere Informationen:</strong> Bettwäsche und Handtücher auf Vorbestellung: € 10,– pro Person und Aufenthalt.
-          </p>
-      </section>
+          <ul class="amenities">
+            <li>1 Badezimmer</li>
+            <li>Badezimmer 1 – WC, Dusche</li>
+          </ul>
+        </div>
 
-    </main>
+        <div class="amenities-group">
+          <h4>Schlafzimmer</h4>
 
-    <footer>
-      <p>© Ferienchalet Bödele</p>
-    </footer>
+          <ul class="amenities">
+            <li>2 Schlafzimmer, Schlafmöglichkeiten für 6</li>
+            <li>Schlafzimmer 1 – 1 Doppelbett</li>
+            <li>Schlafzimmer 2 – 2 Einzelbetten</li>
+            <li>1 Schlafzimmer ist mit 2 Stockbetten ausgestattet</li>
+          </ul>
+        </div>
 
-    <script>
-      const slides = document.querySelectorAll('.hero-slide');
-      const dots = document.querySelectorAll('.dot');
-      let current = 0;
-      let timer;
+        <div class="amenities-group">
+          <h4>Außenbereich</h4>
 
-      function showSlide(index) {
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('active');
-        current = index;
-        slides[current].classList.add('active');
-        dots[current].classList.add('active');
-      }
+          <ul class="amenities">
+            <li>Garten</li>
+            <li>Balkon</li>
+            <li>Parkplatz</li>
+          </ul>
+        </div>
 
-      function nextSlide() {
-        showSlide((current + 1) % slides.length);
-      }
+        <div class="amenities-group">
+          <h4>Unterhaltung</h4>
 
-      function startTimer() {
-        timer = setInterval(nextSlide, 20000);
-      }
+          <ul class="amenities">
+            <li>Fernseher</li>
+            <li>Radio</li>
+            <li>CD-Player</li>
+          </ul>
+        </div>
 
-      dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-          clearInterval(timer);
-          showSlide(i);
-          startTimer();
-        });
-      });
+        <div class="amenities-group">
+          <h4>Geeignet für</h4>
 
-      startTimer();
-    </script>
+          <ul class="amenities">
+            <li>Nichtraucherdomizil</li>
+            <li>Langzeitmieter willkommen</li>
+            <li>Haustiere erlaubt</li>
+            <li>Geeignet für Senioren</li>
+            <li>Für Kinder geeignet</li>
+            <li>Für Rollstuhlfahrer ungeeignet</li>
+          </ul>
+        </div>
 
-    <script>
-      const carousel = document.getElementById('haeuserCarousel');
-      const prevBtn = document.querySelector('.carousel-btn.prev');
-      const nextBtn = document.querySelector('.carousel-btn.next');
+        <div class="amenities-group">
+          <h4>Sportmöglichkeiten vor Ort</h4>
 
-      function scrollByImages(direction) {
-        const imgWidth = carousel.querySelector('img').getBoundingClientRect().width;
-        const gap = 16;
-        carousel.scrollBy({ left: direction * (imgWidth + gap) * 3, behavior: 'smooth' });
-      }
+          <ul class="amenities">
+            <li>Wandern</li>
+            <li>Skilaufen</li>
+            <li>Mountainbiking</li>
+            <li>Bergsteigen</li>
+          </ul>
+        </div>
 
-      prevBtn.addEventListener('click', () => scrollByImages(-1));
-      nextBtn.addEventListener('click', () => scrollByImages(1));
-    </script>
+      </div>
 
-  </body>
-  </html>
+      <p class="intro">
+        <strong>Weitere Informationen:</strong>
+        Bettwäsche und Handtücher auf Vorbestellung:
+        € 10,– pro Person und Aufenthalt.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© Ferienchalet Bödele</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

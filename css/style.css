@@ -1,0 +1,153 @@
+@import url("navbar.css");
+@import url("hero.css");
+@import url("gallery.css");
+@import url("amenities.css");
+@import url("forms.css");
+
+:root {
+  --salbei: #B4C0A2;
+  --tannengruen: #2D4A3E;
+  --wiesengruen: #8BC34A;
+  --cremeweiss: #FFFBF2;
+  --braun: #4A3F35;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+
+  background-color: var(--cremeweiss);
+  color: var(--braun);
+}
+
+header {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+}
+
+header p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 1600px;
+  width: 94%;
+
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+main.narrow {
+  max-width: 800px;
+  width: 100%;
+}
+
+section {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  border-radius: 8px;
+  box-shadow: 0 1px 4px var(--braun);
+
+  background-color: #fff;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--braun);
+}
+
+footer {
+  padding: 1.5rem;
+  text-align: center;
+
+  color: var(--braun);
+}
+
+main a {
+  color: var(--wiesengruen);
+}
+
+main a:hover {
+  color: var(--tannengruen);
+}
+
+.tagline {
+  margin-bottom: 0.5rem;
+
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: var(--tannengruen);
+}
+
+#info h2.divider {
+  margin-top: 4rem;
+  padding-top: 2rem;
+
+  border-top: 1px solid var(--salbei);
+}
+
+button {
+  padding: 0.8rem;
+
+  border: none;
+  border-radius: 4px;
+
+  background-color: var(--tannengruen);
+  color: #fff;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a83a63;
+}
+
+#houses,
+#info {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 3rem 0;
+}
+
+#houses .intro,
+#info p {
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  font-size: 1.2rem;
+}
+
+#houses h2,
+#info h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0 auto 1rem;
+}
+
+#houses p {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}

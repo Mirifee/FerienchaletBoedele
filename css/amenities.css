@@ -1,0 +1,71 @@
+.amenities-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: var(--tannengruen);
+}
+
+.amenities {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 0.75rem 5rem;
+
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.amenities li {
+  position: relative;
+
+  flex: 0 1 160px;
+
+  padding-left: 1.5rem;
+}
+
+.amenities li::before {
+  content: "✓";
+
+  position: absolute;
+  left: 0;
+
+  color: var(--wiesengruen);
+  font-weight: 700;
+}
+
+.amenities-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 2.5rem;
+
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.amenities-group h4 {
+  margin-bottom: 0.5rem;
+
+  color: var(--tannengruen);
+
+  font-weight: 500;
+}
+
+.amenities-group .amenities {
+  display: block;
+
+  max-width: none;
+  margin: 0;
+}
+
+.amenities-group .amenities li {
+  text-align: left;
+  margin-bottom: 0.3rem;
+}
