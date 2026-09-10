@@ -1,34 +1,55 @@
 const slides = document.querySelectorAll('.hero-slide');
   const dots = document.querySelectorAll('.dot');
 
-  let current = 0;
-  let timer;
+  if (slides.length && dots.length) {
+    let current = 0;
+    let timer;
 
-  function showSlide(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = index;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }
+    const showSlide = (index) => {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    };
 
-  function nextSlide() {
-    showSlide((current + 1) % slides.length);
-  }
+    const nextSlide = () => showSlide((current + 1) % slides.length);
 
-  function startTimer() {
-    timer = setInterval(nextSlide, 20000);
-  }
+    const startTimer = () => {
+      timer = setInterval(nextSlide, 20000);
+    };
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      clearInterval(timer);
-      showSlide(i);
-      startTimer();
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(timer);
+        showSlide(i);
+        startTimer();
+      });
     });
-  });
 
-  startTimer();
+    startTimer();
+  }
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (menuToggle && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  }
 
   document.querySelectorAll('.gallery-wrap').forEach(wrap => {
     const gallery = wrap.querySelector('.gallery');
@@ -98,6 +119,26 @@ const dateFrom = document.getElementById('date-from');
 const dateTo = document.getElementById('date-to');
 
 if (noDateCheckbox && dateFrom && dateTo) {
+
+const isEnglish = document.documentElement.lang === 'en';
+
+const contactText = isEnglish ? {
+  dateInvalid: 'Please enter a valid date in the format DD/MM/YYYY, or select "No date selected yet".',
+  dateRange: '"To" cannot be earlier than "From".',
+  nameRequired: 'Please enter your name.',
+  emailRequired: 'Please enter your email address.',
+  sending: 'Sending...',
+  success: 'Thank you! Your inquiry has been sent successfully.',
+  error: 'Unfortunately, something went wrong while sending. Please try again or email us directly at susannefeichtinger3@gmail.com.',
+} : {
+  dateInvalid: 'Bitte geben Sie ein gültiges Datum im Format TT/MM/JJJJ ein, oder wählen Sie "Noch kein Datum ausgewählt".',
+  dateRange: '"Bis" darf nicht vor "Von" liegen.',
+  nameRequired: 'Bitte geben Sie Ihren Namen ein.',
+  emailRequired: 'Bitte geben Sie Ihre E-Mail-Adresse ein.',
+  sending: 'Wird gesendet...',
+  success: 'Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.',
+  error: 'Leider ist beim Senden ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an susannefeichtinger3@gmail.com.',
+};
 
 function formatDateInput(input) {
   const segmentLengths = [2, 2, 4]; // Tag, Monat, Jahr
@@ -198,12 +239,12 @@ function validateDates() {
   const to = parseDate(toValue);
 
   if (!from || !to) {
-    showDateError('Bitte geben Sie ein gültiges Datum im Format TT/MM/JJJJ ein, oder wählen Sie "Noch kein Datum ausgewählt".');
+    showDateError(contactText.dateInvalid);
     return false;
   }
 
   if (from > to) {
-    showDateError('"Bis" darf nicht vor "Von" liegen.');
+    showDateError(contactText.dateRange);
     return false;
   }
 
@@ -248,8 +289,8 @@ contactForm.addEventListener('submit', async (event) => {
   formStatus.hidden = true;
   formStatus.classList.remove('success', 'error');
 
-  const nameValid = validateRequiredField(nameInput, nameError, 'Bitte geben Sie Ihren Namen ein.');
-  const emailValid = validateRequiredField(emailInput, emailError, 'Bitte geben Sie Ihre E-Mail-Adresse ein.');
+  const nameValid = validateRequiredField(nameInput, nameError, contactText.nameRequired);
+  const emailValid = validateRequiredField(emailInput, emailError, contactText.emailRequired);
 
   if (!nameValid) {
     nameInput.focus();
@@ -271,7 +312,7 @@ contactForm.addEventListener('submit', async (event) => {
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const originalButtonText = submitButton.textContent;
   submitButton.disabled = true;
-  submitButton.textContent = 'Wird gesendet...';
+  submitButton.textContent = contactText.sending;
 
   try {
     const response = await fetch(contactForm.action, {
@@ -282,13 +323,13 @@ contactForm.addEventListener('submit', async (event) => {
 
     if (!response.ok) throw new Error('Serverfehler');
 
-    formStatus.textContent = 'Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.';
+    formStatus.textContent = contactText.success;
     formStatus.classList.add('success');
     contactForm.reset();
     dateFrom.disabled = false;
     dateTo.disabled = false;
   } catch (error) {
-    formStatus.textContent = 'Leider ist beim Senden ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@ferienchalet-boedele.at.';
+    formStatus.textContent = contactText.error;
     formStatus.classList.add('error');
   } finally {
     formStatus.hidden = false;

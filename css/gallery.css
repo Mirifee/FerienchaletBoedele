@@ -70,3 +70,9 @@
 .gallery-btn.next {
   right: 1rem;
 }
+
+@media (max-width: 600px) {
+  .gallery img {
+    flex-basis: 100%;
+  }
+}

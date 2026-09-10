@@ -165,6 +165,6 @@ label input.field-invalid {
 }
 
 .form-status.error {
-  background-color: #fce8e6;
-  color: #8c1d18;
+  background-color: #f6e0e9;
+  color: #a83a63;
 }

@@ -18,10 +18,18 @@
   padding: 0;
 }
 
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  overflow-x: hidden;
 
   font-family: "Poppins", system-ui, Arial, sans-serif;
   font-weight: 300;
@@ -341,4 +349,15 @@ button:hover {
     gap: 0.5rem 0;
     font-weight: 500;
   }
+
+@media (max-width: 600px) {
+  .activity-list {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #attractionsgallery figure {
+    flex-basis: 100%;
+  }
+}
 

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <title>Ferienchalet Bödele</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index-en.html">Ferienchalet Bödele</a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index-en.html" class="active">Home</a></li>
+      <li><a href="#houses">Houses</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="contact-en.html">Contact</a></li>
+      <li><a href="index.html" class="lang-toggle">DE</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+
+    <div
+      class="hero-slide active"
+      style="background-image: url('images/winter.jpg');"
+    >
+      <div class="snow"></div>
+    </div>
+
+    <div
+      class="hero-slide"
+      style="background-image: url('images/summer.jpg');"
+    >
+      <div class="sunrays"></div>
+    </div>
+
+    <div class="hero-text">
+      <h1>Ferienchalet Bödele Familie Feichtinger</h1>
+
+      <p>
+        Cozy holiday chalet at the Bödele, perfect for winter and summer holidays. Suitable for families, couples, or solo travelers. Pets
+        are warmly welcome too.
+      </p>
+    </div>
+
+    <div class="hero-dots">
+      <button
+        class="dot active"
+        data-index="0"
+        aria-label="Go to winter view"
+      ></button>
+
+      <button
+        class="dot"
+        data-index="1"
+        aria-label="Go to summer view"
+      ></button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section id="houses">
+
+      <br>
+      <h2>Our Houses</h2>
+
+      <p class="tagline">
+        Arrive. Unwind. Enjoy Bödele.
+      </p>
+
+      <p class="intro">
+        The Bödele offers a special mountain landscape in every season:
+        in summer with pleasant, fresh mountain air and many hiking trails,
+        in winter with snow, skiing, sledding, and beautiful walks through
+        the snowy surroundings.
+      </p>
+
+      <p class="intro">
+        Our holiday houses form a small row-house complex between Schwarzenberg and Dornbirn.
+      </p>
+
+
+      <div class="gallery-wrap">
+
+        <button class="gallery-btn prev" aria-label="Previous">
+          &#10094;
+        </button>
+
+        <div class="gallery" id="picturegallery">
+          <img src="images/livingroom.jpg" alt="Living room">
+          <img src="images/kitchen.jpg" alt="Kitchen">
+          <img src="images/bedroom.jpg" alt="Bedroom">
+          <img src="images/winter.jpg" alt="Winter view">
+          <img src="images/dog.jpg" alt="Dog in the garden">
+          <img src="images/doublepicture.jpg" alt="Holiday chalet">
+        </div>
+
+        <button class="gallery-btn next" aria-label="Next">
+          &#10095;
+        </button>
+
+      </div>
+
+      <p class="intro">
+        The holiday houses offer a cozy living and dining area with kitchen,
+        an entrance area, a balcony, and a bathroom with shower and toilet.
+      </p>
+
+      <p class="intro">
+        A staircase leads to the lower level with two bedrooms: one bedroom
+        with a double bed and another with two single beds. A basement is
+        also available, ideal for storing skis and other equipment.
+      </p>
+
+      <p class="intro">The houses are easily reached by car, with parking available directly in front of them.</p>
+
+      <div class="amenities-section">
+      <h3 class="amenities-title">Amenities</h3>
+
+      <div class="amenities-groups">
+
+        <div class="amenities-group">
+          <h4>Living</h4>
+
+          <ul class="amenities">
+            <li>70 m²</li>
+            <li>Basement and ski room</li>
+            <li>Garden</li>
+            <li>Balcony</li>
+            <li>Parking directly in front of the house</li>
+            <li>Central heating</li>
+          </ul>
+        </div>
+
+        <div class="amenities-group">
+          <h4>Kitchen</h4>
+
+          <ul class="amenities">
+            <li>Coffee machine</li>
+            <li>Electric stove</li>
+            <li>Refrigerator</li>
+            <li>Small freezer</li>
+            <li>Oven</li>
+          </ul>
+        </div>
+
+        <div class="amenities-group">
+          <h4>Dining & Living Area</h4>
+
+          <ul class="amenities">
+            <li>Dining area with corner bench</li>
+            <li>Seating for 6 people</li>
+            <li>Living room with TV</li>
+          </ul>
+        </div>
+
+        <div class="amenities-group">
+          <h4>Bathroom</h4>
+
+          <ul class="amenities">
+            <li>1 bathroom</li>
+            <li>Toilet, shower</li>
+            <li>Towels</li>
+          </ul>
+        </div>
+
+        <div class="amenities-group">
+          <h4>Bedrooms</h4>
+
+          <ul class="amenities">
+            <li>Sleeping space for 4 people</li>
+            <li>Bedroom 1 with a double bed</li>
+            <li>Bedroom 2 with two single beds</li>
+            <li>Bed linen</li>
+          </ul>
+        </div>
+
+        <div class="amenities-group">
+          <h4>Suitable for</h4>
+
+          <ul class="amenities">
+            <li>Suitable for children</li>
+            <li>Pets allowed</li>
+            <li>Long-term guests welcome</li>
+            <li>LGBTQ+ friendly</li>
+            <li class="unavailable">Not wheelchair accessible</li>
+            <li class="unavailable">Smoking indoors is not permitted</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="info">
+        <h2>Good to Know</h2>
+
+        <p class="intro">
+          <strong>Bed linen and towels: </strong> available on request for € 10.00 per person and stay.
+        </p>
+
+        <p class="intro">
+          <strong>Final cleaning: </strong> is carried out by the host. Please leave the house tidy and sweapt clean upon departure. This includes washing and putting away the dishes, disposing of the trash, a quick tidy-up, and closing the windows.
+        </p>
+
+    </section>
+
+    <section id="location">
+      <div class="location-intro">
+        <h2>Location & Directions</h2>
+
+        <p><strong>Ski lifts:</strong> 1 kilometer</p>
+        <p><strong>Nearest bus stop:</strong> 5-minute walk (350 meters)</p>
+        <p><strong>Nearest train station:</strong> Dornbirn, 12 kilometers</p>
+        <p><strong>Nearest highway exit:</strong> Dornbirn, 15 kilometers</p>
+        <p><strong>Nearest shopping facilities:</strong> Schwarzenberg, 4 kilometers</p>
+
+        <p><strong>Car:</strong> Recommended</p>
+
+        <p>
+          Vorarlberg is Austria’s westernmost state, bordering Germany, Switzerland and Liechtenstein. Schwarzenberg lies in the Vorderbregenzerwald region and is just a 5 to 10 minute drive away. Our holiday house is located between Schwarzenberg and Bödele at an altitude of 1,100 metres.
+
+        </p>
+
+        <a
+          class="maps-button"
+          href="https://www.google.com/maps/search/?api=1&query=Spital+648,+6867+Schwarzenberg,+Austria"
+          target="_blank"
+          rel="noopener"
+        >
+          View the location on Google Maps
+        </a>
+      </div>
+
+        <h2 class="divider">Activities & Excursions</h2>
+
+        <p class="activities-intro">
+          Countless hiking trails offer beautiful views of the surrounding mountains throughout the year. The villages of the Bregenzerwald provide plenty of activities for nature lovers. In winter, you can enjoy skiing in the many ski areas across the region. Just a few minutes away, a ski school offers lessons for beginners, including a learn to ski guarantee. In summer, enjoy the fresh mountain air of the Vorarlberg Alps and explore the beautiful surroundings. Spend your holiday in the mountains while still being close to the city.
+        </p>
+
+        <ul class="activity-list">
+          <li>Hiking</li>
+          <li>Winter sports</li>
+          <li>Mountain biking</li>
+          <li>Mountaineering</li>
+          <li>Ski school</li>
+          <li>Sightseeing</li>
+        </ul>
+
+        <div class="gallery-wrap">
+          <button class="gallery-btn prev" aria-label="Previous">&#10094;</button>
+
+          <div class="gallery" id="attractionsgallery">
+            <figure><img src="images/kapelle.jpg" alt="Hochälpele Chapel"><figcaption>Hochälpele Chapel, Bödele</figcaption></figure>
+            <figure><img src="images/angelikakaufmann.jpg" alt="Angelika Kaufmann Museum"><figcaption>Angelika Kaufmann Museum in Schwarzenberg</figcaption></figure>
+            <figure><img src="images/boedelesee.jpg" alt="Bödelesee"><figcaption>Lake Bödele</figcaption></figure>
+            <figure><img src="images/foramoos.JPG" alt="Foramoos nature reserve"><figcaption>Foramoos Nature Reserve at the Bödele</figcaption></figure>
+            <figure><img src="images/bregenzerwaldbahn.jpg" alt="Wälderbähnle"><figcaption>Bregenzerwald Railway ("Wälderbähnle")</figcaption></figure>
+            <figure><img src="images/koerbersee.jpg" alt="Körbersee"><figcaption>Lake Körbersee</figcaption></figure>
+            <figure><img src="images/frauenmuseum.jpg" alt="Women's Museum Hittisau"><figcaption>Women's Museum Hittisau</figcaption></figure>
+            <figure><img src="images/pfaenderbahn.jpg" alt="Pfänderbahn"><figcaption>Pfänderbahn cable car</figcaption></figure>
+            <figure><img src="images/bodensee.jpg" alt="Lake Constance"><figcaption>Lake Constance</figcaption></figure>
+            <figure><img src="images/festspiele.jpg" alt="Bregenz Festival"><figcaption>Bregenzer Festspiele</figcaption></figure>
+            <figure><img src="images/schubertiade.jpg" alt="Schubertiade Hohenems"><figcaption>Schubertiade, Markus-Sittikus Hall</figcaption></figure>
+            <figure><img src="images/rappenloch.JPG" alt="Rappenloch Gorge"><figcaption>Rappenloch Gorge</figcaption></figure>
+            <figure><img src="images/wildpark.jpg" alt="Feldkirch Wildlife Park"><figcaption>Feldkirch Wildlife Park</figcaption></figure>
+          </div>
+
+          <button class="gallery-btn next" aria-label="Next">&#10095;</button>
+        </div>
+
+      </section>
+
+  </main>
+
+  <footer>
+    <a href="index-en.html" class="footer-brand">© Ferienchalet Bödele</a>
+
+    <p class="footer-contact">
+      Susanne Feichtinger ·
+      <a href="tel:+4369911339932">+43 699 11339932</a> ·
+      <a href="mailto:susannefeichtinger3@gmail.com">susannefeichtinger3@gmail.com</a>
+    </p>
+
+    <p class="footer-links">
+      <a href="impressum.html">Imprint (DE)</a> ·
+      <a href="datenschutz.html">Privacy Policy (DE)</a> ·
+      <a href="bildnachweise.html">Photo Credits (DE)</a>
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
