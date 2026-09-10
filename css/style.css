@@ -19,6 +19,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   font-family: "Poppins", system-ui, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.6;
@@ -42,6 +46,8 @@ header p {
 }
 
 main {
+  flex: 1 0 auto;
+
   max-width: 1600px;
   width: 94%;
 
@@ -70,10 +76,39 @@ h2 {
 }
 
 footer {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  margin-top: 2rem;
+
   padding: 1.5rem;
   text-align: center;
 
+  border-top: 1px solid var(--salbei);
+  background-color: var(--cremeweiss);
+
+  font-size: 0.85rem;
   color: var(--braun);
+}
+
+footer a {
+  color: var(--braun);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--tannengruen);
+  text-decoration: underline;
+}
+
+.footer-brand {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.footer-contact {
+  margin-bottom: 0.35rem;
 }
 
 main a {
@@ -96,8 +131,17 @@ main a:hover {
 }
 
 #location h2.divider {
-    margin-top: 4rem;
-    padding-top: 2rem;
+    position: relative;
+    margin-top: 0;
+    padding-top: 5rem;
+}
+
+#location h2.divider::before {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    left: calc(50% - 50vw);
+    width: 100vw;
     border-top: 1px solid var(--salbei);
 }
 
@@ -141,7 +185,7 @@ button:hover {
 #info h2,
 #location h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: 1px;
   margin: 0 auto 1rem;
@@ -154,18 +198,67 @@ button:hover {
   margin: 0 auto 1.5rem;
 }
 
+#houses .gallery-wrap ~ p {
+  text-align: left;
+}
+
 #info .intro.extra-top {
     margin-top: 2.5rem;
 }
 
+#location .activities-intro {
+    margin-bottom: 4rem;
+}
+
 #location {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#location::before {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    left: calc(50% - 50vw);
+    width: 100vw;
     border-top: 1px solid var(--salbei);
-    padding-top: 2rem;
+}
+
+.location-intro {
+    position: relative;
+    z-index: 0;
+}
+
+.location-intro::before {
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    bottom: -2.5rem;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    z-index: -1;
+
+    background-image: url("../images/boedelesee.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
 }
 
 #info {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+#info::before {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    left: calc(50% - 50vw);
+    width: 100vw;
     border-top: 1px solid var(--salbei);
-    padding: 1.5rem 0;
 }
 
 #location ul {
@@ -173,6 +266,30 @@ button:hover {
     max-width: 900px;
     margin: 0 auto 1rem;
     font-size: 1.2rem;
+}
+
+.maps-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+
+    padding: 0.8rem 1.75rem;
+
+    border-radius: 4px;
+    background-color: var(--tannengruen);
+    color: #fff;
+
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.maps-button:hover {
+    background-color: var(--salbei);
+    color: var(--braun);
 }
 
 .activity-list {
@@ -193,7 +310,7 @@ button:hover {
 
   #attractionsgallery img {
     width: 100%;
-    height: 180px;
+    height: 240px;
     object-fit: cover;
     border-radius: 8px;
   }
@@ -219,7 +336,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 900px;
-    margin: 0 auto 1rem;
+    margin: 0 auto 4rem;
     font-size: 1.2rem;
     gap: 0.5rem 0;
     font-weight: 500;

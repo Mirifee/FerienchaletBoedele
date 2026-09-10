@@ -77,6 +77,7 @@
 
     <section id="houses">
 
+      <br>
       <h2>Unsere Häuser</h2>
 
       <p class="tagline">
@@ -126,8 +127,9 @@
         Beispiel ideal zur Aufbewahrung von Ski und anderer Ausrüstung eignet.
       </p>
 
-      <p>Sie sind mit dem Auto sehr gut erreichbar, und direkt vor den Häusern stehen Parkmöglichkeiten zur Verfügung.</p>
+      <p class="intro">Sie sind mit dem Auto sehr gut erreichbar, und direkt vor den Häusern stehen Parkmöglichkeiten zur Verfügung.</p>
 
+      <div class="amenities-section">
       <h3 class="amenities-title">Ausstattung</h3>
 
       <div class="amenities-groups">
@@ -141,6 +143,7 @@
             <li>Garten</li>
             <li>Balkon</li>
             <li>Parkmöglichkeiten direkt vor dem Haus</li>
+            <li>Zentralheizung</li>
           </ul>
         </div>
 
@@ -200,6 +203,7 @@
           </ul>
         </div>
       </div>
+      </div>
     </section>
 
     <section id="info">
@@ -216,6 +220,7 @@
     </section>
 
     <section id="location">
+      <div class="location-intro">
         <h2>Lage & Anreise</h2>
 
         <p><strong>Skilifte:</strong> 1 Kilometer</p>
@@ -231,9 +236,19 @@
           Schwarzenberg zählt zu dem Vorderbregenzerwald und ist in 5-10 Fahrminuten zu erreichen. Unser Ferienhaus befindet sich zwischen Schwarzenberg und Bödele auf 1100 m Höhe.
         </p>
 
+        <a
+          class="maps-button"
+          href="https://www.google.com/maps/search/?api=1&query=Spital+648,+6867+Schwarzenberg,+Austria"
+          target="_blank"
+          rel="noopener"
+        >
+          Sehen Sie sich die Lage auf Google Maps an
+        </a>
+      </div>
+
         <h2 class="divider">Aktivitäten & Ausflugsziele</h2>
 
-        <p>
+        <p class="activities-intro">
           Bei zahllosen Wanderungen können Sie das umliegende Bergpanorama das ganze Jahr genießen.
           Die umliegenden Orte des Bregenzerwalds laden den naturinteressierten Urlauber auf unzählige Ausflüge ein.
           Im Winter wird das Skifahren in sämtlichen Skigebieten im Bregenzerwald
@@ -256,13 +271,19 @@
           <button class="gallery-btn prev" aria-label="Zurück">&#10094;</button>
 
           <div class="gallery" id="attractionsgallery">
-            <figure><img src="images/bregenzerwaldbahn.jpg" alt="Wälderbähnle"><figcaption>Wälderbähnle</figcaption></figure>
-            <figure><img src="images/angelikakaufmann.jpg" alt="Angelika Kaufmann Museum"><figcaption>Angelika Kaufmann Museum</figcaption></figure>
+            <figure><img src="images/kapelle.jpg" alt="Hochälpele Kapelle"><figcaption>Hochälpele Kapelle Bödele</figcaption></figure>
+            <figure><img src="images/angelikakaufmann.jpg" alt="Angelika Kaufmann Museum"><figcaption>Angelika Kaufmann Museum in Schwarzenberg</figcaption></figure>
             <figure><img src="images/boedelesee.jpg" alt="Bödelesee"><figcaption>Bödelesee</figcaption></figure>
-            <figure><img src="images/bodensee.jpg" alt="Bodensee"><figcaption>Bodensee</figcaption></figure>
-            <figure><img src="images/festspiele.jpg" alt="Bregenzer Festspiele"><figcaption>Bregenzer
-        Festspiele</figcaption></figure>
+            <figure><img src="images/foramoos.JPG" alt="Naturschutzgebiet Foramoos"><figcaption>Naturschutzgebiet Foramoos im Bödele</figcaption></figure>
+            <figure><img src="images/bregenzerwaldbahn.jpg" alt="Wälderbähnle"><figcaption>Bregenzerwälderbähnle</figcaption></figure>
+            <figure><img src="images/koerbersee.jpg" alt="Körbersee"><figcaption>Körbersee</figcaption></figure>
+            <figure><img src="images/frauenmuseum.jpg" alt="Frauenmuseum Hittisau"><figcaption>Frauenmuseum Hittisau</figcaption></figure>
             <figure><img src="images/pfaenderbahn.jpg" alt="Pfänderbahn"><figcaption>Pfänderbahn</figcaption></figure>
+            <figure><img src="images/bodensee.jpg" alt="Bodensee"><figcaption>Bodensee</figcaption></figure>
+            <figure><img src="images/festspiele.jpg" alt="Bregenzer Festspiele"><figcaption>Bregenzer Festspiele</figcaption></figure>
+            <figure><img src="images/schubertiade.jpg" alt="Schubertiade Hohenems"><figcaption>Schubertiade Markus-Sittikus-Saal</figcaption></figure>
+            <figure><img src="images/rappenloch.JPG" alt="Rappenlochschlucht"><figcaption>Rappenlochschlucht</figcaption></figure>
+            <figure><img src="images/wildpark.jpg" alt="Wildpark Feldkirch"><figcaption>Wildpark Feldkirch</figcaption></figure>
           </div>
 
           <button class="gallery-btn next" aria-label="Weiter">&#10095;</button>
@@ -273,8 +294,19 @@
   </main>
 
   <footer>
-    <p>© Ferienchalet Bödele</p>
-    <p><a href="bildnachweise.html">Bildnachweise</a></p>
+    <a href="index.html" class="footer-brand">© Ferienchalet Bödele</a>
+
+    <p class="footer-contact">
+      Susanne Feichtinger ·
+      <a href="tel:+4300000000">+43 000 0000</a> ·
+      <a href="mailto:info@ferienchalet-boedele.at">info@ferienchalet-boedele.at</a>
+    </p>
+
+    <p class="footer-links">
+      <a href="impressum.html">Impressum</a> ·
+      <a href="datenschutz.html">Datenschutz</a> ·
+      <a href="bildnachweise.html">Bildnachweise</a>
+    </p>
   </footer>
 
   <script src="js/script.js"></script>
