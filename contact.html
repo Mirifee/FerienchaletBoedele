@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <title>Kontakt – Ferienchalet Bödele</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="contact-body">
@@ -39,13 +40,13 @@
       <div class="contact-details">
         <p>
           <strong>Telefon:</strong>
-          <a href="tel:+4300000000">+43 000 0000</a>
+          <a href="tel:+4369911339932">+43 699 11339932</a>
         </p>
 
         <p>
           <strong>E-Mail:</strong>
-          <a href="mailto:info@ferienchalet-boedele.at">
-            info@ferienchalet-boedele.at
+          <a href="mailto:susannefeichtinger3@gmail.com">
+            susannefeichtinger3@gmail.com
           </a>
         </p>
       </div>
@@ -54,16 +55,23 @@
 
         <h3>Kontaktformular</h3>
 
-        <form action="https://formspree.io/f/DEIN_CODE" method="POST">
+        <p class="required-note">* Pflichtfeld</p>
+
+        <form id="contact-form" action="https://formspree.io/f/mrpgjpaq" method="POST">
+
+          <!-- Honeypot-Feld gegen Spam-Bots: für Menschen unsichtbar, Formspree verwirft Anfragen, bei denen es ausgefüllt ist -->
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
 
           <label>
-            Name<br>
+            Name <span class="required-mark" aria-hidden="true">*</span><br>
             <input type="text" name="name" required>
+            <p class="field-error" id="name-error" role="alert" hidden></p>
           </label>
 
           <label>
-            E-Mail<br>
+            E-Mail <span class="required-mark" aria-hidden="true">*</span><br>
             <input type="email" name="email" required>
+            <p class="field-error" id="email-error" role="alert" hidden></p>
           </label>
 
           <div class="date-section">
@@ -99,14 +107,18 @@
               <input type="checkbox" id="no-date" name="kein_datum">
               Noch kein Datum ausgewählt
             </label>
+
+            <p id="date-error" class="date-error" role="alert" hidden></p>
           </div>
 
           <label>
             Nachricht<br>
-            <textarea name="nachricht" rows="5" required></textarea>
+            <textarea name="nachricht" rows="5"></textarea>
           </label>
 
           <button type="submit">Anfrage senden</button>
+
+          <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
 
         </form>
 
@@ -119,8 +131,8 @@
 
       <p class="footer-contact">
         Susanne Feichtinger ·
-        <a href="tel:+4300000000">+43 000 0000</a> ·
-        <a href="mailto:info@ferienchalet-boedele.at">info@ferienchalet-boedele.at</a>
+        <a href="tel:+4369911339932">+43 699 11339932</a> ·
+        <a href="mailto:susannefeichtinger3@gmail.com">susannefeichtinger3@gmail.com</a>
       </p>
 
       <p class="footer-links">

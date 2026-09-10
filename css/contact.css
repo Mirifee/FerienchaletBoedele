@@ -18,6 +18,11 @@ textarea {
   font-size: 1rem;
 }
 
+textarea {
+  resize: none;
+  overflow-y: auto;
+}
+
   .contact-page {
   padding-top: 2rem;
 }
@@ -111,4 +116,55 @@ body.contact-body::before {
   .date-fields {
     grid-template-columns: 1fr;
   }
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.date-error {
+  font-size: 0.9rem;
+  color: #b3261e;
+}
+
+.required-note {
+  font-size: 0.85rem;
+  color: var(--braun);
+  opacity: 0.75;
+}
+
+.required-mark {
+  color: #b3261e;
+}
+
+.field-error {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #b3261e;
+}
+
+label input.field-invalid {
+  border-color: #b3261e;
+}
+
+.form-status {
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.form-status.success {
+  background-color: var(--salbei);
+  color: var(--braun);
+}
+
+.form-status.error {
+  background-color: #fce8e6;
+  color: #8c1d18;
 }

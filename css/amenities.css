@@ -39,7 +39,7 @@
   position: absolute;
   left: 0;
 
-  color: var(--wiesengruen);
+  color: var(--tannengruen);
   font-weight: 700;
 }
 
@@ -106,6 +106,6 @@
 
 .amenities li.unavailable::before {
     content: "✗";
-    color: #999;
+    color: #666;
     font-weight: 400;
 }

@@ -97,6 +97,8 @@ const slides = document.querySelectorAll('.hero-slide');
 const dateFrom = document.getElementById('date-from');
 const dateTo = document.getElementById('date-to');
 
+if (noDateCheckbox && dateFrom && dateTo) {
+
 function formatDateInput(input) {
   const segmentLengths = [2, 2, 4]; // Tag, Monat, Jahr
 
@@ -151,3 +153,148 @@ noDateCheckbox.addEventListener('change', () => {
     dateTo.value = '';
   }
 });
+
+const dateError = document.getElementById('date-error');
+
+function parseDate(value) {
+  const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
+  if (!match) return null;
+
+  const day = Number(match[1]);
+  const month = Number(match[2]);
+  const year = Number(match[3]);
+  const date = new Date(year, month - 1, day);
+
+  // new Date() rechnet ungültige Werte wie 31.02. auf den nächsten
+  // gültigen Tag um -> per Rückvergleich echte Kalenderdaten erzwingen
+  if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
+    return null;
+  }
+
+  return date;
+}
+
+function showDateError(message) {
+  dateError.textContent = message;
+  dateError.hidden = false;
+}
+
+function hideDateError() {
+  dateError.textContent = '';
+  dateError.hidden = true;
+}
+
+function validateDates() {
+  hideDateError();
+
+  if (noDateCheckbox.checked) return true;
+
+  const fromValue = dateFrom.value.trim();
+  const toValue = dateTo.value.trim();
+
+  if (!fromValue && !toValue) return true;
+
+  const from = parseDate(fromValue);
+  const to = parseDate(toValue);
+
+  if (!from || !to) {
+    showDateError('Bitte geben Sie ein gültiges Datum im Format TT/MM/JJJJ ein, oder wählen Sie "Noch kein Datum ausgewählt".');
+    return false;
+  }
+
+  if (from > to) {
+    showDateError('"Bis" darf nicht vor "Von" liegen.');
+    return false;
+  }
+
+  return true;
+}
+
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const nameInput = contactForm.querySelector('[name="name"]');
+const emailInput = contactForm.querySelector('[name="email"]');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+
+function showFieldError(input, errorEl, message) {
+  input.classList.add('field-invalid');
+  errorEl.textContent = message;
+  errorEl.hidden = false;
+}
+
+function hideFieldError(input, errorEl) {
+  input.classList.remove('field-invalid');
+  errorEl.textContent = '';
+  errorEl.hidden = true;
+}
+
+function validateRequiredField(input, errorEl, message) {
+  if (!input.value.trim()) {
+    showFieldError(input, errorEl, message);
+    return false;
+  }
+
+  hideFieldError(input, errorEl);
+  return true;
+}
+
+nameInput.addEventListener('input', () => hideFieldError(nameInput, nameError));
+emailInput.addEventListener('input', () => hideFieldError(emailInput, emailError));
+
+contactForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  formStatus.hidden = true;
+  formStatus.classList.remove('success', 'error');
+
+  const nameValid = validateRequiredField(nameInput, nameError, 'Bitte geben Sie Ihren Namen ein.');
+  const emailValid = validateRequiredField(emailInput, emailError, 'Bitte geben Sie Ihre E-Mail-Adresse ein.');
+
+  if (!nameValid) {
+    nameInput.focus();
+    return;
+  }
+
+  if (!emailValid) {
+    emailInput.focus();
+    return;
+  }
+
+  if (!validateDates()) {
+    dateFrom.focus();
+    return;
+  }
+
+  if (!contactForm.reportValidity()) return;
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.textContent;
+  submitButton.disabled = true;
+  submitButton.textContent = 'Wird gesendet...';
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' },
+    });
+
+    if (!response.ok) throw new Error('Serverfehler');
+
+    formStatus.textContent = 'Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.';
+    formStatus.classList.add('success');
+    contactForm.reset();
+    dateFrom.disabled = false;
+    dateTo.disabled = false;
+  } catch (error) {
+    formStatus.textContent = 'Leider ist beim Senden ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@ferienchalet-boedele.at.';
+    formStatus.classList.add('error');
+  } finally {
+    formStatus.hidden = false;
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+  }
+});
+
+}
