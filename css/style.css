@@ -2,7 +2,7 @@
 @import url("hero.css");
 @import url("gallery.css");
 @import url("amenities.css");
-@import url("forms.css");
+@import url("contact.css");
 
 :root {
   --salbei: #B4C0A2;
@@ -95,11 +95,10 @@ main a:hover {
   color: var(--tannengruen);
 }
 
-#info h2.divider {
-  margin-top: 4rem;
-  padding-top: 2rem;
-
-  border-top: 1px solid var(--salbei);
+#location h2.divider {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--salbei);
 }
 
 button {
@@ -122,7 +121,8 @@ button:hover {
 }
 
 #houses,
-#info {
+#info,
+#location {
   background: none;
   box-shadow: none;
   border-radius: 0;
@@ -130,14 +130,16 @@ button:hover {
 }
 
 #houses .intro,
-#info p {
+#info p,
+#location p {
   max-width: 900px;
   margin: 0 auto 1rem;
   font-size: 1.2rem;
 }
 
 #houses h2,
-#info h2 {
+#info h2,
+#location h2 {
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
@@ -151,3 +153,75 @@ button:hover {
   max-width: 700px;
   margin: 0 auto 1.5rem;
 }
+
+#info .intro.extra-top {
+    margin-top: 2.5rem;
+}
+
+#location {
+    border-top: 1px solid var(--salbei);
+    padding-top: 2rem;
+}
+
+#info {
+    border-top: 1px solid var(--salbei);
+    padding: 1.5rem 0;
+}
+
+#location ul {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    font-size: 1.2rem;
+}
+
+.activity-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    font-size: 1.2rem;
+    gap: 0.5rem 0;
+}
+
+#attractionsgallery figure {
+    flex: 0 0 calc((100% - 2rem) / 3);
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+  #attractionsgallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  #attractionsgallery figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+.activity-list {
+     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    font-size: 1.2rem;
+    gap: 0.5rem 0;
+    font-weight: 500;
+  }
+

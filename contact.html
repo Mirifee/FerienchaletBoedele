@@ -16,35 +16,109 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#houses">Häuser</a></li>
-        <li><a href="info.html">Info</a></li>
+        <li><a href="index.html#info">Info</a></li>
         <li><a href="contact.html" class="active">Kontakt</a></li>
       </ul>
     </nav>
 
-    <main class="narrow">
-      <section>
-        <h2>Kontakt &amp; Anfrage</h2>
-        <p><strong>Telefon:</strong> <a href="tel:+4300000000">+43 000 0000</a></p>
-        <p><strong>E-Mail:</strong> <a href="mailto:info@ferienchalet-boedele.at">info@ferienchalet-boedele.at</a></p>
+    <main class="narrow contact-page">
+
+      <h2>Kontakt &amp; Anfrage</h2>
+
+      <p class="contact-intro">
+        Wir freuen uns über Ihre Anfrage. Gerne können Sie uns auch unverbindlich
+        kontaktieren, wenn Sie weitere Informationen zu unseren Ferienhäusern,
+        zur Ausstattung oder zu Ihrem Aufenthalt wünschen.
+      </p>
+
+      <p class="contact-intro">
+        Sie erreichen uns gerne per E-Mail oder telefonisch. Alternativ können Sie
+        uns über das Kontaktformular eine Nachricht senden.
+      </p>
+
+      <div class="contact-details">
+        <p>
+          <strong>Telefon:</strong>
+          <a href="tel:+4300000000">+43 000 0000</a>
+        </p>
+
+        <p>
+          <strong>E-Mail:</strong>
+          <a href="mailto:info@ferienchalet-boedele.at">
+            info@ferienchalet-boedele.at
+          </a>
+        </p>
+      </div>
+
+      <section class="contact-form-box">
+
+        <h3>Kontaktformular</h3>
 
         <form action="https://formspree.io/f/DEIN_CODE" method="POST">
-          <label>Name<br>
+
+          <label>
+            Name<br>
             <input type="text" name="name" required>
           </label>
-          <label>E-Mail<br>
+
+          <label>
+            E-Mail<br>
             <input type="email" name="email" required>
           </label>
-          <label>Nachricht<br>
-            <textarea name="nachricht" rows="4" required></textarea>
+
+          <div class="date-section">
+            <span class="date-title">Gewünschtes Datum des Aufenthaltes</span>
+
+            <div class="date-fields">
+              <label>
+                Von<br>
+                <input
+                  type="text"
+                  id="date-from"
+                  name="datum_von"
+                  placeholder="TT/MM/JJJJ"
+                  maxlength="10"
+                  inputmode="numeric"
+                >
+              </label>
+
+              <label>
+                Bis<br>
+                <input
+                  type="text"
+                  id="date-to"
+                  name="datum_bis"
+                  placeholder="TT/MM/JJJJ"
+                  maxlength="10"
+                  inputmode="numeric"
+                >
+              </label>
+            </div>
+
+            <label class="no-date">
+              <input type="checkbox" id="no-date" name="kein_datum">
+              Noch kein Datum ausgewählt
+            </label>
+          </div>
+
+          <label>
+            Nachricht<br>
+            <textarea name="nachricht" rows="5" required></textarea>
           </label>
+
           <button type="submit">Anfrage senden</button>
+
         </form>
+
       </section>
+
     </main>
 
     <footer>
       <p>© Ferienchalet Bödele</p>
     </footer>
+
+  <script src="js/script.js"></script>
 
   </body>
   </html>

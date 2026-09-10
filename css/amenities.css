@@ -69,3 +69,9 @@
   text-align: left;
   margin-bottom: 0.3rem;
 }
+
+.amenities li.unavailable::before {
+    content: "✗";
+    color: #999;
+    font-weight: 400;
+}
