@@ -414,5 +414,14 @@ button:hover {
   .activity-list {
     font-size: 1rem;
   }
+
+  #attractionsgallery img {
+    height: 220px;
+  }
+
+  #attractionsgallery figcaption {
+    white-space: normal;
+    text-align: center;
+  }
 }
 

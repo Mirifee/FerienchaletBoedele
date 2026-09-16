@@ -74,5 +74,6 @@
 @media (max-width: 600px) {
   .gallery img {
     flex-basis: 100%;
+    height: 220px;
   }
 }

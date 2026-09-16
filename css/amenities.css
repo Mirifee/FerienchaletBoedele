@@ -114,4 +114,8 @@
   .amenities-title {
     font-size: 1.8rem;
   }
+
+  .amenities {
+    gap: 0.75rem 2rem;
+  }
 }

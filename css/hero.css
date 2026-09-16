@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   height: 90vh;
+  height: 90svh;
   overflow: hidden;
 
   display: flex;
@@ -77,6 +78,8 @@
 }
 
 .dot {
+  position: relative;
+
   width: 12px;
   height: 12px;
 
@@ -87,6 +90,12 @@
 
   cursor: pointer;
   padding: 0;
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
 }
 
 .dot.active {
