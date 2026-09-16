@@ -72,6 +72,23 @@
   background: none;
 
   cursor: pointer;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-toggle:hover,
+.menu-toggle:active,
+.menu-toggle:focus {
+  background: none;
+  outline: none;
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--braun);
+  outline-offset: 2px;
 }
 
 .menu-toggle span {

@@ -44,6 +44,7 @@ const slides = document.querySelectorAll('.hero-slide');
       const isOpen = navLinks.classList.toggle('open');
       menuToggle.classList.toggle('open', isOpen);
       menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.blur();
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
