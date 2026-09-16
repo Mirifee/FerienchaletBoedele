@@ -239,6 +239,14 @@ button:hover {
   margin: 0 auto 1rem;
 }
 
+@media (max-width: 600px) {
+  #houses h2,
+  #info h2,
+  #location h2 {
+    font-size: 1.8rem;
+  }
+}
+
 #houses p {
   text-align: center;
   font-size: 1.2rem;
@@ -398,6 +406,15 @@ button:hover {
 
   #attractionsgallery figure {
     flex-basis: 100%;
+  }
+
+  #houses .intro,
+  #info p,
+  #location p,
+  #houses p,
+  #location ul,
+  .activity-list {
+    font-size: 1rem;
   }
 }
 

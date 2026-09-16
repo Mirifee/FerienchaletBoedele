@@ -109,3 +109,9 @@
     color: #666;
     font-weight: 400;
 }
+
+@media (max-width: 600px) {
+  .amenities-title {
+    font-size: 1.8rem;
+  }
+}

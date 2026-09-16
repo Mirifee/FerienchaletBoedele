@@ -52,6 +52,12 @@ body.contact-body::before {
   margin: 0 auto 1rem;
 }
 
+@media (max-width: 600px) {
+  .contact-page > h2 {
+    font-size: 1.8rem;
+  }
+}
+
 .contact-intro {
   max-width: 700px;
   margin: 0 auto 1rem;
@@ -115,6 +121,11 @@ body.contact-body::before {
 @media (max-width: 600px) {
   .date-fields {
     grid-template-columns: 1fr;
+  }
+
+  .contact-intro,
+  .contact-details {
+    font-size: 1rem;
   }
 }
 
