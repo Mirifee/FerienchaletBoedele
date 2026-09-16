@@ -103,6 +103,15 @@ main {
   padding: 0 1.5rem;
 }
 
+.hero + main {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero + main + footer {
+  margin-top: 0;
+}
+
 main.narrow {
   max-width: 800px;
   width: 100%;
@@ -219,6 +228,15 @@ button:hover {
   box-shadow: none;
   border-radius: 0;
   padding: 3rem 0;
+  margin-bottom: 0;
+}
+
+#houses {
+  padding-top: 5rem;
+}
+
+#houses .gallery-wrap {
+  padding-bottom: 3.5rem;
 }
 
 #houses .intro,
@@ -273,6 +291,10 @@ button:hover {
     margin-bottom: 0;
 }
 
+#location .gallery-wrap {
+    padding-bottom: 1.5rem;
+}
+
 #location::before {
     content: "";
     position: absolute;
@@ -291,7 +313,7 @@ button:hover {
     content: "";
     position: absolute;
     top: -2.5rem;
-    bottom: -2.5rem;
+    bottom: -3.5rem;
     left: calc(50% - 50vw);
     width: 100vw;
     z-index: -1;
@@ -327,7 +349,7 @@ button:hover {
 .maps-button {
     display: block;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
 
     padding: 0.8rem 1.75rem;
 
@@ -392,7 +414,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 900px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 1rem;
     font-size: 1.2rem;
     gap: 0.5rem 0;
     font-weight: 500;
